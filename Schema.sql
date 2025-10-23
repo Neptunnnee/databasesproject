@@ -64,7 +64,6 @@ CREATE TABLE Promotes (
   FOREIGN KEY (product_id) REFERENCES Product(product_id)
 );
 
-
 CREATE TABLE Payment (
   payment_id INT PRIMARY KEY,
   amount     DECIMAL(10,2) NOT NULL
@@ -78,3 +77,13 @@ CREATE TABLE Giftcard_Payment (
   FOREIGN KEY (payment_id) REFERENCES Payment(payment_id)
 );
 
+ALTER TABLE Employees
+  MODIFY emp_id INT NOT NULL AUTO_INCREMENT;
+ALTER TABLE Product
+  MODIFY product_id INT NOT NULL AUTO_INCREMENT;
+ALTER TABLE Payment
+  MODIFY payment_id INT NOT NULL AUTO_INCREMENT;
+ALTER TABLE Smartwatch_bands
+  MODIFY length INT;
+ALTER TABLE Product
+  MODIFY brand VARCHAR(100);
