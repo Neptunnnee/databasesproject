@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Autocomplete Demo</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- jQuery UI -->
+  <link rel="stylesheet"
+        href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+</head>
+<body>
+  <h1>Autocomplete Demo (Assignment 9)</h1>
+  <p>Start typing a fruit name:</p>
+  <input id="demo-tags">
+
+  <script>
+    const tags = [
+      "Apple",
+      "Banana",
+      "Blueberry",
+      "Cherry",
+      "Grapes",
+      "Orange",
+      "Strawberry",
+      "Watermelon"
+    ];
+
+    $(function () {
+      $("#demo-tags").autocomplete({
+        source: tags
+      });
+    });
+  </script>
+</body>
+</html>
